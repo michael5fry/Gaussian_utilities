@@ -54,8 +54,8 @@ def TRJ_creator(file_name):
     # Create the effective xyz coordinate of the optimized configurazion
     all_xyz_coord = []
     for i in range(len(index_xyz)):
-        lines_xyz = starter[index_xyz[i]+5:index_xyz[i]+50] #+5 first
-        # use the defined function for to create each xyz 
+        lines_xyz = starter[index_xyz[i]+5:index_xyz[i]+50000] #+5 first while +50000 is just a very big number 
+                # use the defined function for to create each xyz      for which you encounter the confinment
         xyz_coord_n, atoms = create_xyz_coord(lines_xyz)
     
         # and append them on the list
